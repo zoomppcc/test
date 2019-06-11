@@ -1,0 +1,22 @@
+代码
+cd /e/git
+
+ssh-keygen -t rsa -C "1094289238@QQ.COM"
+
+出现两个文件夹，将id_rsa.pub的内容复制到创建的SSH keys里即可
+
+验证：
+ssh -T git@github.com
+
+配置用户名和邮箱：
+git global user.name "zoomppcc"
+git global user.email "1094289238@qq.com"
+
+创建本地仓库：
+git init
+git add 1.txt
+git commit -m "add 1.txt file"
+git remote add orign git@github.com:zoomppcc/test.git
+git push -u orign master
+
+
